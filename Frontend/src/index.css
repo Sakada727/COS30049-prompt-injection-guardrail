@@ -179,3 +179,20 @@ button.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
 /* The light-blue global focus ring is hard to see on white and pale backgrounds */
 .page :focus-visible { outline-color: var(--blue); }
+
+/* ---------- Result card ---------- */
+.result {
+  margin-top: 24px; padding: 32px 24px; text-align: center;
+  border-radius: var(--radius);
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  background: var(--muted);
+}
+.result.blocked { background: var(--red); }
+.result.allowed { background: var(--green); }
+
+.result-label {
+  margin: 0; font-size: clamp(2rem, 8vw, 3.5rem);
+  line-height: 1.1; text-transform: uppercase;
+}
+.result-confidence { margin: 12px 0 0; font-size: 1.3rem; }

@@ -1,13 +1,17 @@
 import { useState } from "react";
+import { checkMessage } from "../API/API";
 
 const MAX_LENGTH = 5000;
 
 export default function Check() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState(null); // { label, confidence }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    if (loading) return;
 
     if (!text.trim()) {
       setError("Please enter a message to check.");
@@ -19,9 +23,23 @@ export default function Check() {
     }
 
     setError("");
-    // Step 2 will send text.trim() to the API here
-    console.log("valid input:", text.trim());
+    setResult(null);
+    setLoading(true);
+
+    try {
+      const data = await checkMessage(text.trim());
+      setResult(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   }
+
+  const label = result?.label?.toLowerCase();
+  const verdictClass =
+    label === "blocked" ? "blocked" : label === "allowed" ? "allowed" : "neutral";
+  const icon = label === "blocked" ? "✖" : label === "allowed" ? "✔" : "•";
 
   return (
     <main className="page">
@@ -33,7 +51,10 @@ export default function Check() {
           id="message"
           rows={5}
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => {
+            setText(e.target.value);
+            if (error) setError("");
+          }}
           aria-invalid={Boolean(error)}
           aria-describedby={error ? "message-error" : undefined}
         />
@@ -48,8 +69,25 @@ export default function Check() {
           </p>
         )}
 
-        <button type="submit" className="btn">Check</button>
+        <button type="submit" className="btn" disabled={loading}>
+          {loading ? "Checking…" : "Check"}
+        </button>
       </form>
+
+      {/* Always in the page so screen readers announce changes */}
+      <div aria-live="polite">
+        {result && (
+          <section className={`result ${verdictClass}`} aria-label="Result">
+            <p className="result-label">
+              <span aria-hidden="true">{icon}</span> {result.label}
+            </p>
+            <p className="result-confidence">
+              Confidence: {Math.round(result.confidence * 100)}%
+            </p>
+          </section>
+        )}
+      </div>
     </main>
   );
 }
+
