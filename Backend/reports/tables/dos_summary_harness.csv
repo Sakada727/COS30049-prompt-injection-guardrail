@@ -1,0 +1,4 @@
+mode,answered,refused_503,flood_s,health_max_ms,user_median_ms,user_max_ms,user_refused,server_mb
+before,100 to 100,0 to 0,8.3 to 9.1,"1,418 to 8,348","311 to 8,310","2,189 to 8,310",0 of 39,269
+after: threads,64 to 70,30 to 36,5.8 to 6.3,"697 to 2,442",190 to 437,"1,336 to 3,681",26 of 42,270
+after: processes,42 to 45,55 to 58,1.8 to 1.9,325 to 808,214 to 371,388 to 806,6 of 21,798

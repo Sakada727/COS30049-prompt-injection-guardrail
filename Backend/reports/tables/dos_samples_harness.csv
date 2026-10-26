@@ -1,0 +1,609 @@
+mode,rep,who,phase,status,ms
+before,0,health,baseline,200,13.986800011480227
+before,0,health,baseline,200,6.893399986438453
+before,0,health,baseline,200,6.0511000046972185
+before,0,health,baseline,200,171.8098999990616
+before,0,health,baseline,200,6.3265000062529
+before,0,health,baseline,200,366.2500999926124
+before,0,health,flood,200,8348.060300020734
+before,0,health,after,200,10.534500004723668
+before,0,health,after,200,12.93589998385869
+before,0,health,after,200,12.327999982517213
+before,0,health,after,200,17.62060000328347
+before,0,normal user,baseline,200,47.09110001567751
+before,0,normal user,baseline,200,215.80749997519888
+before,0,normal user,baseline,200,380.9276999963913
+before,0,normal user,flood,200,8309.808899997734
+before,0,normal user,after,200,23.721000005025417
+before,0,normal user,after,200,36.11389998695813
+before,1,health,baseline,200,13.87369999429211
+before,1,health,baseline,200,7.0525000046473
+before,1,health,baseline,200,10.539799986872822
+before,1,health,baseline,200,6.736099981935695
+before,1,health,baseline,200,6.841199996415526
+before,1,health,baseline,200,6.032200006302446
+before,1,health,baseline,200,8.487200015224516
+before,1,health,baseline,200,8.037300023715943
+before,1,health,baseline,200,267.4469999910798
+before,1,health,flood,200,1763.970200001495
+before,1,health,flood,200,255.17840002430603
+before,1,health,flood,200,240.66169999423437
+before,1,health,flood,200,294.07220002030954
+before,1,health,flood,200,278.09339997475035
+before,1,health,flood,200,265.2282000053674
+before,1,health,flood,200,321.5515000047162
+before,1,health,flood,200,226.48419998586178
+before,1,health,flood,200,232.83310001716018
+before,1,health,flood,200,258.31710000056773
+before,1,health,flood,200,315.97189998137765
+before,1,health,flood,200,239.13629999151453
+before,1,health,flood,200,318.80889998865314
+before,1,health,flood,200,237.77780000818893
+before,1,health,flood,200,292.04219998791814
+before,1,health,flood,200,272.6884000003338
+before,1,health,flood,200,263.19089997559786
+before,1,health,flood,200,251.08000001637265
+before,1,health,flood,200,285.0849999813363
+before,1,health,flood,200,246.77599998540245
+before,1,health,flood,200,43.81250002188608
+before,1,health,after,200,11.104400007752702
+before,1,health,after,200,12.694900011410937
+before,1,health,after,200,10.637500003213063
+before,1,health,after,200,43.51059999316931
+before,1,normal user,baseline,200,27.31909998692572
+before,1,normal user,baseline,200,25.314099999377504
+before,1,normal user,baseline,200,22.016100003384054
+before,1,normal user,baseline,200,23.95770000293851
+before,1,normal user,flood,200,378.1631999881938
+before,1,normal user,flood,200,6913.144500023918
+before,1,normal user,flood,200,326.8821000237949
+before,1,normal user,flood,200,209.8853999923449
+before,1,normal user,after,200,27.709399990271777
+before,1,normal user,after,200,54.895499983103946
+before,2,health,baseline,200,14.545999991241843
+before,2,health,baseline,200,5.850399989867583
+before,2,health,baseline,200,19.108900014543906
+before,2,health,baseline,200,6.655700010014698
+before,2,health,baseline,200,8.15769998007454
+before,2,health,baseline,200,6.77690000156872
+before,2,health,baseline,200,10.429200017824769
+before,2,health,baseline,200,5.5179999908432364
+before,2,health,flood,200,189.51169998035766
+before,2,health,flood,200,4345.7534999761265
+before,2,health,flood,200,312.5831999932416
+before,2,health,flood,200,299.7750999929849
+before,2,health,flood,200,302.5937000056729
+before,2,health,flood,200,262.1942000114359
+before,2,health,flood,200,324.52749999356456
+before,2,health,flood,200,350.9501999942586
+before,2,health,flood,200,291.34480000357144
+before,2,health,flood,200,281.8898999830708
+before,2,health,flood,200,290.8999000210315
+before,2,health,flood,200,350.79789999872446
+before,2,health,flood,200,359.0869000181556
+before,2,health,flood,200,149.61230001063086
+before,2,health,after,200,12.291799997910857
+before,2,health,after,200,14.830500003881752
+before,2,health,after,200,11.536200006958097
+before,2,health,after,200,10.88839999283664
+before,2,normal user,baseline,200,24.135800020303577
+before,2,normal user,baseline,200,17.790199985029176
+before,2,normal user,baseline,200,21.12789999227971
+before,2,normal user,baseline,200,24.376299988944083
+before,2,normal user,flood,200,113.8922999962233
+before,2,normal user,flood,200,3814.4021999905817
+before,2,normal user,flood,200,343.9778999891132
+before,2,normal user,flood,200,369.972400018014
+before,2,normal user,flood,200,365.19730000873096
+before,2,normal user,flood,200,316.6110000165645
+before,2,normal user,flood,200,331.84730002540164
+before,2,normal user,flood,200,337.18520001275465
+before,2,normal user,flood,200,308.1397000059951
+before,2,normal user,flood,200,329.44810000481084
+before,2,normal user,flood,200,330.0337000109721
+before,2,normal user,flood,200,412.095000006957
+before,2,normal user,flood,200,205.85199998458847
+before,2,normal user,after,200,32.930699991993606
+before,2,normal user,after,200,24.01839999947697
+before,3,health,baseline,200,17.481799994129688
+before,3,health,baseline,200,7.240500010084361
+before,3,health,baseline,200,21.842899994226173
+before,3,health,baseline,200,7.982099981745705
+before,3,health,baseline,200,27.838899986818433
+before,3,health,baseline,200,5.860500008566305
+before,3,health,baseline,200,13.58169998275116
+before,3,health,flood,200,218.7442000140436
+before,3,health,flood,200,1806.0353000182658
+before,3,health,flood,200,268.1418999854941
+before,3,health,flood,200,281.55069999047555
+before,3,health,flood,200,257.0343000115827
+before,3,health,flood,200,274.3416999874171
+before,3,health,flood,200,265.6969000236131
+before,3,health,flood,200,287.88129999884404
+before,3,health,flood,200,286.28410000237636
+before,3,health,flood,200,255.14340001973324
+before,3,health,flood,200,260.9191999945324
+before,3,health,flood,200,268.2181999844033
+before,3,health,flood,200,304.33780001476407
+before,3,health,flood,200,244.868999987375
+before,3,health,flood,200,275.7088000071235
+before,3,health,flood,200,275.8204000128899
+before,3,health,flood,200,270.77669999562204
+before,3,health,flood,200,208.6354999919422
+before,3,health,flood,200,273.56410000356846
+before,3,health,flood,200,271.8147000123281
+before,3,health,flood,200,288.3972999989055
+before,3,health,after,200,13.556399993831292
+before,3,health,after,200,39.790700015146285
+before,3,health,after,200,10.130000009667128
+before,3,health,after,200,17.25159998750314
+before,3,normal user,baseline,200,25.4537999862805
+before,3,normal user,baseline,200,24.442800000542775
+before,3,normal user,baseline,200,30.531099997460842
+before,3,normal user,baseline,200,26.15180000429973
+before,3,normal user,flood,200,347.3789000126999
+before,3,normal user,flood,200,6606.76650001551
+before,3,normal user,flood,200,296.1592000210658
+before,3,normal user,flood,200,310.88699999963865
+before,3,normal user,flood,200,66.83989998418838
+before,3,normal user,after,200,40.042500011622906
+before,3,normal user,after,200,26.887799991527572
+before,4,health,baseline,200,12.702800013357773
+before,4,health,baseline,200,3.5849999985657632
+before,4,health,baseline,200,10.579699999652803
+before,4,health,baseline,200,7.595300005050376
+before,4,health,baseline,200,9.876000025542453
+before,4,health,baseline,200,6.300200009718537
+before,4,health,baseline,200,5.633400025544688
+before,4,health,baseline,200,7.763999979943037
+before,4,health,baseline,200,333.22090000729077
+before,4,health,flood,200,1418.2381999853533
+before,4,health,flood,200,274.35520000290126
+before,4,health,flood,200,266.14940000581555
+before,4,health,flood,200,199.94610000867397
+before,4,health,flood,200,267.05150000634603
+before,4,health,flood,200,259.1508000041358
+before,4,health,flood,200,282.70060001523234
+before,4,health,flood,200,298.97589999018237
+before,4,health,flood,200,302.08000002312474
+before,4,health,flood,200,291.81659998721443
+before,4,health,flood,200,344.36940000159666
+before,4,health,flood,200,286.4887000177987
+before,4,health,flood,200,279.6845000120811
+before,4,health,flood,200,310.2068000007421
+before,4,health,flood,200,325.6149000080768
+before,4,health,flood,200,392.57029999862425
+before,4,health,flood,200,299.67340000439435
+before,4,health,flood,200,309.34229999547824
+before,4,health,flood,200,282.6469999854453
+before,4,health,flood,200,268.3142999885604
+before,4,health,flood,200,231.41320000286214
+before,4,health,after,200,12.095400015823543
+before,4,health,after,200,27.663999993819743
+before,4,health,after,200,12.302399991312996
+before,4,health,after,200,19.92329998756759
+before,4,normal user,baseline,200,27.45740002137609
+before,4,normal user,baseline,200,23.43309999560006
+before,4,normal user,baseline,200,23.516500019468367
+before,4,normal user,baseline,200,20.37969999946654
+before,4,normal user,flood,200,48.874300002353266
+before,4,normal user,flood,200,2188.8803000038024
+before,4,normal user,flood,200,294.2501000070479
+before,4,normal user,flood,200,310.4383999889251
+before,4,normal user,flood,200,308.7281000043731
+before,4,normal user,flood,200,333.79130001412705
+before,4,normal user,flood,200,334.64590000221506
+before,4,normal user,flood,200,318.35590000264347
+before,4,normal user,flood,200,337.5377999909688
+before,4,normal user,flood,200,312.5057000142988
+before,4,normal user,flood,200,313.3442999969702
+before,4,normal user,flood,200,317.7517000003718
+before,4,normal user,flood,200,342.59149999707006
+before,4,normal user,flood,200,367.80049998196773
+before,4,normal user,flood,200,325.3804999985732
+before,4,normal user,flood,200,323.30129999900237
+before,4,normal user,after,200,28.41579998494126
+before,4,normal user,after,200,39.03020001598634
+before,4,normal user,after,200,24.13689999957569
+after: threads,0,health,baseline,200,18.290699983481318
+after: threads,0,health,baseline,200,6.1947999929543585
+after: threads,0,health,baseline,200,7.700899994233623
+after: threads,0,health,baseline,200,7.051200023852289
+after: threads,0,health,baseline,200,7.100899994838983
+after: threads,0,health,baseline,200,6.160899996757507
+after: threads,0,health,baseline,200,7.787600014125928
+after: threads,0,health,baseline,200,6.599200016353279
+after: threads,0,health,flood,200,252.47920001856983
+after: threads,0,health,flood,200,868.6057000013534
+after: threads,0,health,flood,200,159.2454999918118
+after: threads,0,health,flood,200,144.8685000068508
+after: threads,0,health,flood,200,78.50279999547638
+after: threads,0,health,flood,200,144.59949999582022
+after: threads,0,health,flood,200,114.91780000505969
+after: threads,0,health,flood,200,164.20699999434873
+after: threads,0,health,flood,200,272.68090000143275
+after: threads,0,health,flood,200,34.053900017170236
+after: threads,0,health,flood,200,121.34830001741648
+after: threads,0,health,flood,200,86.17480000248179
+after: threads,0,health,flood,200,129.02620001113974
+after: threads,0,health,flood,200,136.38539999374188
+after: threads,0,health,flood,200,187.6586000144016
+after: threads,0,health,flood,200,129.63060001493432
+after: threads,0,health,flood,200,148.81169999716803
+after: threads,0,health,flood,200,196.67949998984113
+after: threads,0,health,flood,200,198.35930000408553
+after: threads,0,health,flood,200,148.61470001051202
+after: threads,0,health,flood,200,178.4580000094138
+after: threads,0,health,flood,200,226.39530000742525
+after: threads,0,health,flood,200,136.69699997990392
+after: threads,0,health,flood,200,117.1252999920398
+after: threads,0,health,flood,200,115.19410001346841
+after: threads,0,health,flood,200,187.135300016962
+after: threads,0,health,after,200,18.53020000271499
+after: threads,0,health,after,200,27.735200012102723
+after: threads,0,health,after,200,21.48450000095181
+after: threads,0,health,after,200,31.70210000826046
+after: threads,0,normal user,baseline,200,56.639299989910796
+after: threads,0,normal user,baseline,200,22.892900014994666
+after: threads,0,normal user,baseline,200,24.91300000110641
+after: threads,0,normal user,baseline,200,17.187399993417785
+after: threads,0,normal user,flood,200,436.9918000011239
+after: threads,0,normal user,flood,503,3681.3366999849677
+after: threads,0,normal user,flood,503,229.09310000250116
+after: threads,0,normal user,flood,200,894.0621999790892
+after: threads,0,normal user,flood,200,231.59749998012558
+after: threads,0,normal user,after,200,42.47190000023693
+after: threads,0,normal user,after,200,49.11699998774566
+after: threads,1,health,baseline,200,16.51830002083443
+after: threads,1,health,baseline,200,6.534899992402643
+after: threads,1,health,baseline,200,9.857800003373995
+after: threads,1,health,baseline,200,6.421600002795458
+after: threads,1,health,baseline,200,10.594500025035813
+after: threads,1,health,baseline,200,6.705999985570088
+after: threads,1,health,baseline,200,10.762699996121228
+after: threads,1,health,baseline,200,6.377699988661334
+after: threads,1,health,flood,200,255.19739999435842
+after: threads,1,health,flood,200,792.5823999976274
+after: threads,1,health,flood,200,205.65820002229884
+after: threads,1,health,flood,200,208.3033999952022
+after: threads,1,health,flood,200,224.56760000204667
+after: threads,1,health,flood,200,117.14849999407306
+after: threads,1,health,flood,200,190.83440001122653
+after: threads,1,health,flood,200,131.51310000102967
+after: threads,1,health,flood,200,167.84810001263395
+after: threads,1,health,flood,200,173.8406000076793
+after: threads,1,health,flood,200,228.8432999921497
+after: threads,1,health,flood,200,242.35420001787134
+after: threads,1,health,flood,200,67.59190000593662
+after: threads,1,health,flood,200,213.39610000723042
+after: threads,1,health,flood,200,188.34399999468587
+after: threads,1,health,flood,200,184.39460001536645
+after: threads,1,health,flood,200,152.09640000830404
+after: threads,1,health,flood,200,339.5287999883294
+after: threads,1,health,flood,200,214.38520000083372
+after: threads,1,health,flood,200,105.20280001219362
+after: threads,1,health,flood,200,118.4376000019256
+after: threads,1,health,flood,200,161.72599999117665
+after: threads,1,health,flood,200,101.17619999800809
+after: threads,1,health,after,200,21.08340000268072
+after: threads,1,health,after,200,31.043399998452514
+after: threads,1,health,after,200,20.315100002335384
+after: threads,1,health,after,200,22.793499985709786
+after: threads,1,normal user,baseline,200,27.984899992588907
+after: threads,1,normal user,baseline,200,20.732900011353195
+after: threads,1,normal user,baseline,200,21.401400008471683
+after: threads,1,normal user,baseline,200,24.165999988326803
+after: threads,1,normal user,flood,200,286.45509999478236
+after: threads,1,normal user,flood,200,2310.7019999879412
+after: threads,1,normal user,flood,200,931.6824999987148
+after: threads,1,normal user,flood,503,148.51299999281764
+after: threads,1,normal user,flood,503,194.09420000738464
+after: threads,1,normal user,flood,503,194.05510000069626
+after: threads,1,normal user,flood,200,1069.722999993246
+after: threads,1,normal user,flood,200,171.6448999941349
+after: threads,1,normal user,after,200,49.608000001171604
+after: threads,1,normal user,after,200,31.532599998172373
+after: threads,2,health,baseline,200,14.992700016591698
+after: threads,2,health,baseline,200,7.056700007524341
+after: threads,2,health,baseline,200,12.797200004570186
+after: threads,2,health,baseline,200,7.3561999888625
+after: threads,2,health,baseline,200,13.56270001269877
+after: threads,2,health,baseline,200,5.9794999833684415
+after: threads,2,health,baseline,200,14.142600004561245
+after: threads,2,health,baseline,200,5.903099983697757
+after: threads,2,health,flood,200,193.32290001329966
+after: threads,2,health,flood,200,2441.63670000853
+after: threads,2,health,flood,200,117.39020000095479
+after: threads,2,health,flood,200,190.54609999875538
+after: threads,2,health,flood,200,196.25709997490048
+after: threads,2,health,flood,200,139.57589998608455
+after: threads,2,health,flood,200,133.8097999978345
+after: threads,2,health,flood,200,190.71349999285303
+after: threads,2,health,flood,200,166.7639999941457
+after: threads,2,health,flood,200,210.94320001429878
+after: threads,2,health,flood,200,146.34099998511374
+after: threads,2,health,flood,200,203.64389999303967
+after: threads,2,health,flood,200,124.58540001534857
+after: threads,2,health,flood,200,168.95950000616722
+after: threads,2,health,flood,200,113.36750001646578
+after: threads,2,health,flood,200,132.9414999927394
+after: threads,2,health,flood,200,45.453400001861155
+after: threads,2,health,after,200,17.375399998854846
+after: threads,2,health,after,200,23.76759998151101
+after: threads,2,health,after,200,21.28780001658015
+after: threads,2,health,after,200,25.143299979390576
+after: threads,2,normal user,baseline,200,26.56840000418015
+after: threads,2,normal user,baseline,200,22.52189998398535
+after: threads,2,normal user,baseline,200,24.70720000565052
+after: threads,2,normal user,baseline,200,23.68759998353198
+after: threads,2,normal user,flood,200,187.81319999834523
+after: threads,2,normal user,flood,200,3625.5354000022635
+after: threads,2,normal user,flood,503,182.80099998810329
+after: threads,2,normal user,flood,503,203.91129999188706
+after: threads,2,normal user,flood,503,168.78450001240708
+after: threads,2,normal user,flood,503,189.59449999965727
+after: threads,2,normal user,flood,200,576.4162999985274
+after: threads,2,normal user,after,200,33.489499997813255
+after: threads,2,normal user,after,200,40.60219999519177
+after: threads,3,health,baseline,200,18.457500002114102
+after: threads,3,health,baseline,200,4.951300012180582
+after: threads,3,health,baseline,200,11.139900016132742
+after: threads,3,health,baseline,200,6.598899984965101
+after: threads,3,health,baseline,200,9.51350000104867
+after: threads,3,health,baseline,200,4.758299997774884
+after: threads,3,health,baseline,200,8.74729998758994
+after: threads,3,health,baseline,200,6.192100001499057
+after: threads,3,health,flood,200,271.83419998618774
+after: threads,3,health,flood,200,697.2290000121575
+after: threads,3,health,flood,200,86.82880000560544
+after: threads,3,health,flood,200,128.33840001258068
+after: threads,3,health,flood,200,128.21769999573007
+after: threads,3,health,flood,200,150.48209999804385
+after: threads,3,health,flood,200,131.3032000034582
+after: threads,3,health,flood,200,195.29299999703653
+after: threads,3,health,flood,200,104.7705999808386
+after: threads,3,health,flood,200,193.59549999353476
+after: threads,3,health,flood,200,132.33300001593307
+after: threads,3,health,flood,200,185.5187999899499
+after: threads,3,health,flood,200,204.49299999745563
+after: threads,3,health,flood,200,139.83810000354424
+after: threads,3,health,flood,200,148.11490001739003
+after: threads,3,health,flood,200,161.9903999962844
+after: threads,3,health,flood,200,181.0976999986451
+after: threads,3,health,flood,200,145.32609999878332
+after: threads,3,health,flood,200,267.6647999905981
+after: threads,3,health,flood,200,119.89010000252165
+after: threads,3,health,flood,200,110.10510000050999
+after: threads,3,health,flood,200,173.30399999627843
+after: threads,3,health,flood,200,132.96339998487383
+after: threads,3,health,flood,200,176.5546000096947
+after: threads,3,health,flood,200,64.27939998684451
+after: threads,3,health,after,200,22.34860000316985
+after: threads,3,health,after,200,34.73210000083782
+after: threads,3,health,after,200,18.025500001385808
+after: threads,3,health,after,200,30.521399981807917
+after: threads,3,normal user,baseline,200,31.989599985536188
+after: threads,3,normal user,baseline,200,20.694299979368225
+after: threads,3,normal user,baseline,200,24.2998999892734
+after: threads,3,normal user,baseline,200,20.722600020235404
+after: threads,3,normal user,flood,200,305.5377000127919
+after: threads,3,normal user,flood,503,1336.3826000131667
+after: threads,3,normal user,flood,503,177.23030000342987
+after: threads,3,normal user,flood,503,131.09349997830577
+after: threads,3,normal user,flood,503,205.06579999346286
+after: threads,3,normal user,flood,200,993.833899992751
+after: threads,3,normal user,flood,503,173.44559999764897
+after: threads,3,normal user,flood,503,226.31440000259317
+after: threads,3,normal user,flood,503,266.2347999867052
+after: threads,3,normal user,flood,503,188.5721000144258
+after: threads,3,normal user,flood,200,730.630400008522
+after: threads,3,normal user,after,200,45.40329999872483
+after: threads,3,normal user,after,200,44.93900001398288
+after: threads,4,health,baseline,200,16.047799988882616
+after: threads,4,health,baseline,200,5.894000001717359
+after: threads,4,health,baseline,200,13.380099990172312
+after: threads,4,health,baseline,200,8.304799994220957
+after: threads,4,health,baseline,200,11.443199997302145
+after: threads,4,health,baseline,200,7.840100006433204
+after: threads,4,health,baseline,200,8.187800005543977
+after: threads,4,health,baseline,200,8.55930001125671
+after: threads,4,health,flood,200,201.79989997996017
+after: threads,4,health,flood,200,2348.2072000042535
+after: threads,4,health,flood,200,223.0703999812249
+after: threads,4,health,flood,200,200.23859999491833
+after: threads,4,health,flood,200,177.86060000071302
+after: threads,4,health,flood,200,252.41510002524592
+after: threads,4,health,flood,200,201.7469999846071
+after: threads,4,health,flood,200,147.83559998613782
+after: threads,4,health,flood,200,256.5468999964651
+after: threads,4,health,flood,200,206.01610001176596
+after: threads,4,health,flood,200,182.36080001224764
+after: threads,4,health,flood,200,142.95569999376312
+after: threads,4,health,flood,200,174.28050001035444
+after: threads,4,health,flood,200,161.86839999863878
+after: threads,4,health,flood,200,164.70200000912882
+after: threads,4,health,flood,200,90.44749999884516
+after: threads,4,health,after,200,22.788999980548397
+after: threads,4,health,after,200,34.550200012745336
+after: threads,4,health,after,200,19.54369997838512
+after: threads,4,normal user,baseline,200,27.347800001734868
+after: threads,4,normal user,baseline,200,25.16200000536628
+after: threads,4,normal user,baseline,200,24.32779999799095
+after: threads,4,normal user,baseline,200,21.67300001019612
+after: threads,4,normal user,flood,200,150.99619998363778
+after: threads,4,normal user,flood,503,2311.9220999942627
+after: threads,4,normal user,flood,503,235.5989999778103
+after: threads,4,normal user,flood,503,180.04809998092242
+after: threads,4,normal user,flood,503,212.33100001700222
+after: threads,4,normal user,flood,503,196.89500000094995
+after: threads,4,normal user,flood,503,212.75440001045354
+after: threads,4,normal user,flood,503,247.2293000028003
+after: threads,4,normal user,flood,503,181.4402999880258
+after: threads,4,normal user,flood,503,230.82310002064332
+after: threads,4,normal user,flood,200,783.9535000093747
+after: threads,4,normal user,after,200,35.180000006221235
+after: threads,4,normal user,after,200,32.44760000961833
+after: processes,0,health,baseline,200,17.58970000082627
+after: processes,0,health,baseline,200,6.1366999871097505
+after: processes,0,health,baseline,200,7.863900013035163
+after: processes,0,health,baseline,200,7.979799993336201
+after: processes,0,health,baseline,200,6.378799997037277
+after: processes,0,health,baseline,200,7.905699982075021
+after: processes,0,health,baseline,200,6.8026999942958355
+after: processes,0,health,baseline,200,10.378500010119751
+after: processes,0,health,flood,200,248.04559999029152
+after: processes,0,health,flood,200,89.27230001427233
+after: processes,0,health,flood,200,807.9586999956518
+after: processes,0,health,flood,200,171.14840002614073
+after: processes,0,health,flood,200,11.316300020553172
+after: processes,0,health,flood,200,7.970699982251972
+after: processes,0,health,flood,200,8.289399993373081
+after: processes,0,health,flood,200,7.406100019579753
+after: processes,0,health,flood,200,7.837300014216453
+after: processes,0,health,flood,200,7.56359999650158
+after: processes,0,health,after,200,11.21419999981299
+after: processes,0,health,after,200,14.497800002573058
+after: processes,0,health,after,200,11.737699998775497
+after: processes,0,health,after,200,12.264600023627281
+after: processes,0,health,after,200,12.671300006331876
+after: processes,0,normal user,baseline,200,61.8761999940034
+after: processes,0,normal user,baseline,200,55.38419997901656
+after: processes,0,normal user,baseline,200,21.506299992324784
+after: processes,0,normal user,baseline,200,29.075400001602247
+after: processes,0,normal user,flood,200,164.02029999881051
+after: processes,0,normal user,flood,503,297.0885999966413
+after: processes,0,normal user,flood,200,545.9794999915175
+after: processes,0,normal user,flood,200,310.52660002023913
+after: processes,0,normal user,after,200,25.99170000758022
+after: processes,0,normal user,after,200,30.514099984429777
+after: processes,1,health,baseline,200,16.092000005301088
+after: processes,1,health,baseline,200,7.050400017760694
+after: processes,1,health,baseline,200,11.438999994425103
+after: processes,1,health,baseline,200,4.609900002833456
+after: processes,1,health,baseline,200,7.830499991541728
+after: processes,1,health,baseline,200,7.1044999931473285
+after: processes,1,health,baseline,200,6.319200008874759
+after: processes,1,health,baseline,200,6.264400028157979
+after: processes,1,health,baseline,200,249.80170000344515
+after: processes,1,health,flood,200,85.30910001718439
+after: processes,1,health,flood,200,244.32519997935742
+after: processes,1,health,flood,200,194.47099999524653
+after: processes,1,health,flood,200,450.2106999862008
+after: processes,1,health,flood,200,8.061600005021319
+after: processes,1,health,flood,200,11.808899987954646
+after: processes,1,health,flood,200,7.848500012187287
+after: processes,1,health,flood,200,6.309899996267632
+after: processes,1,health,flood,200,11.951199994655326
+after: processes,1,health,flood,200,9.543399995891377
+after: processes,1,health,after,200,9.383900003740564
+after: processes,1,health,after,200,10.964499990222976
+after: processes,1,health,after,200,9.376799978781492
+after: processes,1,health,after,200,10.70750001235865
+after: processes,1,normal user,baseline,200,25.865500007057562
+after: processes,1,normal user,baseline,200,28.544900007545948
+after: processes,1,normal user,baseline,200,23.17080000648275
+after: processes,1,normal user,baseline,200,25.383500003954396
+after: processes,1,normal user,flood,200,158.75849997974
+after: processes,1,normal user,flood,503,805.5129999993369
+after: processes,1,normal user,flood,503,57.115100004011765
+after: processes,1,normal user,flood,200,289.48140001739375
+after: processes,1,normal user,after,200,22.33359997626394
+after: processes,1,normal user,after,200,27.08509998046793
+after: processes,2,health,baseline,200,21.373900002799928
+after: processes,2,health,baseline,200,6.941200001165271
+after: processes,2,health,baseline,200,7.021199999144301
+after: processes,2,health,baseline,200,6.044699985068291
+after: processes,2,health,baseline,200,10.025800002040341
+after: processes,2,health,baseline,200,5.773999990196899
+after: processes,2,health,baseline,200,6.030699994880706
+after: processes,2,health,baseline,200,6.686900014756247
+after: processes,2,health,flood,200,236.4460000244435
+after: processes,2,health,flood,200,90.1298999961
+after: processes,2,health,flood,200,54.52780000632629
+after: processes,2,health,flood,200,288.2767000119202
+after: processes,2,health,flood,200,325.25579998036847
+after: processes,2,health,flood,200,165.2872999839019
+after: processes,2,health,flood,200,21.014300000388175
+after: processes,2,health,flood,200,21.968499990180135
+after: processes,2,health,flood,200,8.237300004111603
+after: processes,2,health,flood,200,7.303899998078123
+after: processes,2,health,flood,200,7.5477999926079065
+after: processes,2,health,after,200,9.999000001698732
+after: processes,2,health,after,200,10.421100014355034
+after: processes,2,health,after,200,17.295799974817783
+after: processes,2,health,after,200,8.803300006547943
+after: processes,2,health,after,200,9.040500008268282
+after: processes,2,normal user,baseline,200,38.4417999885045
+after: processes,2,normal user,baseline,200,21.630600007483736
+after: processes,2,normal user,baseline,200,26.633600005879998
+after: processes,2,normal user,baseline,200,19.468800019240007
+after: processes,2,normal user,flood,200,76.75409998046234
+after: processes,2,normal user,flood,200,430.09880001773126
+after: processes,2,normal user,flood,503,213.76780001446605
+after: processes,2,normal user,flood,503,197.37569999415427
+after: processes,2,normal user,flood,200,327.85910001257434
+after: processes,2,normal user,after,200,28.068699990399182
+after: processes,2,normal user,after,200,23.078400001395494
+after: processes,3,health,baseline,200,17.41020000190474
+after: processes,3,health,baseline,200,7.371200015768409
+after: processes,3,health,baseline,200,11.776500003179535
+after: processes,3,health,baseline,200,5.404600000474602
+after: processes,3,health,baseline,200,7.436999992933124
+after: processes,3,health,baseline,200,7.524100015871227
+after: processes,3,health,baseline,200,10.090100025990978
+after: processes,3,health,baseline,200,7.482400018488988
+after: processes,3,health,flood,200,51.24299999442883
+after: processes,3,health,flood,200,89.15040001738816
+after: processes,3,health,flood,200,92.92880000430159
+after: processes,3,health,flood,200,104.09300000173971
+after: processes,3,health,flood,200,654.27389999968
+after: processes,3,health,flood,200,57.86999998963438
+after: processes,3,health,flood,200,8.8644000061322
+after: processes,3,health,flood,200,11.12680000369437
+after: processes,3,health,flood,200,9.497899998677894
+after: processes,3,health,flood,200,8.15770000917837
+after: processes,3,health,after,200,7.163000002037734
+after: processes,3,health,after,200,12.85129997995682
+after: processes,3,health,after,200,8.714299998246133
+after: processes,3,health,after,200,12.289499980397522
+after: processes,3,health,after,200,4.583900008583441
+after: processes,3,normal user,baseline,200,37.90120000485331
+after: processes,3,normal user,baseline,200,28.146799973910674
+after: processes,3,normal user,baseline,200,17.380200006300583
+after: processes,3,normal user,baseline,200,24.12510002613999
+after: processes,3,normal user,flood,200,188.89970000600442
+after: processes,3,normal user,flood,200,368.6329000047408
+after: processes,3,normal user,flood,200,388.18710000487044
+after: processes,3,normal user,flood,200,374.06810000538826
+after: processes,3,normal user,after,200,27.32059999834746
+after: processes,3,normal user,after,200,24.975700012873858
+after: processes,4,health,baseline,200,14.701699983561411
+after: processes,4,health,baseline,200,6.75910001154989
+after: processes,4,health,baseline,200,6.184799975017086
+after: processes,4,health,baseline,200,5.07750001270324
+after: processes,4,health,baseline,200,8.48950000363402
+after: processes,4,health,baseline,200,5.727699986891821
+after: processes,4,health,baseline,200,11.938399984501302
+after: processes,4,health,baseline,200,6.910999974934384
+after: processes,4,health,flood,200,254.01889998465776
+after: processes,4,health,flood,200,102.71219999413006
+after: processes,4,health,flood,200,774.2667999991681
+after: processes,4,health,flood,200,175.5284999962896
+after: processes,4,health,flood,200,9.529799979645759
+after: processes,4,health,flood,200,11.131700011901557
+after: processes,4,health,flood,200,16.30529999965802
+after: processes,4,health,flood,200,11.241199972573668
+after: processes,4,health,after,200,10.62010001624003
+after: processes,4,health,after,200,15.070699999341741
+after: processes,4,health,after,200,12.175300013041124
+after: processes,4,health,after,200,15.443999989656731
+after: processes,4,normal user,baseline,200,37.94139999081381
+after: processes,4,normal user,baseline,200,19.897200021659955
+after: processes,4,normal user,baseline,200,21.077699988381937
+after: processes,4,normal user,baseline,200,29.09560000989586
+after: processes,4,normal user,flood,200,168.45830000238493
+after: processes,4,normal user,flood,200,634.5839999848977
+after: processes,4,normal user,flood,503,123.73049999587238
+after: processes,4,normal user,flood,200,312.48839999898337
+after: processes,4,normal user,after,200,34.468800004106015
+after: processes,4,normal user,after,200,43.79329999210313

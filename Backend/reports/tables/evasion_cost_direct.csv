@@ -1,0 +1,7 @@
+condition,set,n,benign_blocked
+no normaliser,test benign,1211,0.00990916597853014
+no normaliser,NotInject,339,0.19174041297935104
+A2 system,test benign,1211,0.00990916597853014
+A2 system,NotInject,339,0.18584070796460178
+A3 normaliser,test benign,1211,0.00990916597853014
+A3 normaliser,NotInject,339,0.19174041297935104
