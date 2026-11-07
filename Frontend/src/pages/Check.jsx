@@ -39,7 +39,7 @@ export default function Check() {
   const label = result?.label?.toLowerCase();
   const verdictClass =
     label === "blocked" ? "blocked" : label === "allowed" ? "allowed" : "neutral";
-  const icon = label === "blocked" ? "✖" : label === "allowed" ? "✔" : "•";
+    const icon = label === "blocked" ? "✖" : label === "allowed" ? "✔" : "•";
 
   return (
     <main className="page">
@@ -49,7 +49,7 @@ export default function Check() {
         <label htmlFor="message">Message to check</label>
         <textarea
           id="message"
-          rows={5}
+          rows={4}
           value={text}
           onChange={(e) => {
             setText(e.target.value);
@@ -78,9 +78,7 @@ export default function Check() {
       <div aria-live="polite">
         {result && (
           <section className={`result ${verdictClass}`} aria-label="Result">
-            <p className="result-label">
-              <span aria-hidden="true">{icon}</span> {result.label}
-            </p>
+            <p className="result-label">{result.label}</p>
             <p className="result-confidence">
               Confidence: {Math.round(result.confidence * 100)}%
             </p>
@@ -90,4 +88,3 @@ export default function Check() {
     </main>
   );
 }
-
