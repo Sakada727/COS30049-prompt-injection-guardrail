@@ -1,0 +1,7 @@
+input,chars,median_ms,p95_ms,max_ms
+typical prompt,139,4.39,7.86,39.21
+"8,000 chars of English",8000,47.75,55.47,59.52
+"8,000 chars of base64",7996,60.22,69.51,70.83
+"8,000 chars of @-symbol leet",7999,45.96,50.62,52.81
+"8,000 chars of spaced letters",7999,37.09,51.62,53.53
+"8,000 chars of CJK characters",8000,66.58,78.16,81.14
