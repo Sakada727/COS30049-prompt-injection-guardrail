@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Check from "./Check.jsx";
 
 const steps = [
   { title: "1. Send a message", text: "Type or paste any message you would give to an AI assistant." },
@@ -7,6 +8,10 @@ const steps = [
 ];
 
 export default function Home() {
+  const [active, setActive] = useState(0);
+  const step = steps[active];
+  const next = () => setActive((i) => (i + 1) % steps.length);
+
   return (
     <main className="page">
       <section className="hero">
@@ -16,20 +21,25 @@ export default function Home() {
           secrets. This guardrail checks a message first and tells you whether
           it is safe to pass on.
         </p>
-        <Link to="/check" className="btn">Try the guardrail</Link>
+        <a href="#check" className="btn">Try the guardrail</a>
       </section>
-
-      <section aria-labelledby="how">
+      
+      <section id="how-it-works" aria-labelledby="how">
         <h2 id="how">How it works</h2>
-        <ul className="steps">
-          {steps.map((s) => (
-            <li key={s.title} className="step">
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-            </li>
-          ))}
-        </ul>
+        <p className="slider-hint" aria-live="polite">
+            Step {active + 1} of {steps.length}. Click the card to see the next step.
+          </p>
+        <div className="slider">
+          <button type="button" className="step" onClick={next}>
+            <span key={active} className="step-body">
+              <span className="step-title">{step.title}</span>
+              <span className="step-text">{step.text}</span>
+            </span>
+          </button>
+          
+        </div>
       </section>
+      <Check />
     </main>
   );
 }

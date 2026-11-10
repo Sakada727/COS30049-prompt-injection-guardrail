@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -26,14 +26,15 @@ export default function Header() {
         <span />
       </button>
 
-      <Link to="/" className="site-title">
+      <a href="#top" className="site-title">
         Prompt Injection Guardrail
-      </Link>
+      </a>
 
-      {open && (
+            {open && (
         <nav id="drawer" className="drawer" aria-label="Main">
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/check" onClick={() => setOpen(false)}>Check a prompt</Link>
+          <a href="#top" onClick={() => setOpen(false)}>Home</a>
+          <a href="#check" onClick={() => setOpen(false)}>Check a prompt</a>
+          <a href="#how-it-works" onClick={() => setOpen(false)}>How it works</a>
         </nav>
       )}
     </header>

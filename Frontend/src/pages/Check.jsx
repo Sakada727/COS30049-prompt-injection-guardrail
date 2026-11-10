@@ -42,11 +42,19 @@ export default function Check() {
     const icon = label === "blocked" ? "✖" : label === "allowed" ? "✔" : "•";
 
   return (
-    <main className="page">
-      <h1>Check a prompt</h1>
+       <section id="check">
+      <form
+        className="check-form"
+        onSubmit={handleSubmit}
+        noValidate
+        aria-labelledby="check-title"
+      >
+        <h2 id="check-title" className="check-title">Check a prompt</h2>
+        <p className="check-sub">
+          Paste the text a user wants to send to your language model.
+        </p>
 
-      <form className="check-form" onSubmit={handleSubmit} noValidate>
-        <label htmlFor="message">Message to check</label>
+        <label htmlFor="message">Prompt text</label>
         <textarea
           id="message"
           rows={4}
@@ -85,6 +93,6 @@ export default function Check() {
           </section>
         )}
       </div>
-    </main>
+      </section>
   );
 }
