@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { getHistory, startNewSession } from "../api/client.js";
+import { clearHistory, getHistory, startNewSession } from "../api/client.js";
 
 const LIMIT = 50;
 
@@ -32,6 +32,7 @@ export default function useHistory() {
   );
 
   const reset = useCallback(() => {
+    clearHistory().catch(() => {});
     startNewSession();
     setItems([]);
   }, []);

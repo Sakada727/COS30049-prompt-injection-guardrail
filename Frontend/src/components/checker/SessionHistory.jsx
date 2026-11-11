@@ -86,7 +86,7 @@ export default function SessionHistory({ items, source, onReuse, onReset }) {
             ))}
           </div>
           <button type="button" className="btn btn--quiet" onClick={() => { onReset(); setSelectedId(null); }}>
-            Start a new session
+            Clear history
           </button>
         </div>
       </div>

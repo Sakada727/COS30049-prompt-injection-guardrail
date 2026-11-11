@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { MAX_CHARS, checkPrompt, injectionChance } from "../../api/client.js";
+import { checkPrompt, injectionChance } from "../../api/client.js";
 import { examples } from "../../content/results.js";
 import useApiStatus from "../../hooks/useApiStatus.js";
 import useHistory from "../../hooks/useHistory.js";
@@ -18,12 +18,12 @@ const STATUS_TEXT = {
   offline: "Can't reach the back end right now, so checks won't work.",
 };
 
-// Just for quick feedback. The back end checks the length again.
-function validate(text) {
+//Just for quick feedback. The back end checks the length again.
+function validate(text, maxChars) {
   if (!text.trim()) return "Type or paste a message first.";
-  if (text.length > MAX_CHARS) {
-    const over = text.length - MAX_CHARS;
-    return `That's ${text.length.toLocaleString()} characters and the limit is ${MAX_CHARS.toLocaleString()}. Cut ${over.toLocaleString()} and try again.`;
+  if (text.length > maxChars) {
+    const over = text.length - maxChars;
+    return `That's ${text.length.toLocaleString()} characters and the limit is ${maxChars.toLocaleString()}. Cut ${over.toLocaleString()} and try again.`;
   }
   return "";
 }
@@ -89,7 +89,7 @@ export default function Checker({ text, setText }) {
   const [error, setError] = useState(null);
   const [spotlit, setSpotlit] = useState(false);
   const history = useHistory();
-  const apiStatus = useApiStatus();
+  const { status: apiStatus, maxChars } = useApiStatus();
   const stageRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -104,7 +104,7 @@ export default function Checker({ text, setText }) {
   async function submit(e) {
     e?.preventDefault();
     if (status === "loading") return;
-    const problem = validate(text);
+    const problem = validate(text, maxChars);
     setFieldError(problem);
     if (problem) {
       inputRef.current?.focus();
@@ -149,7 +149,7 @@ export default function Checker({ text, setText }) {
     inputRef.current?.focus();
   };
 
-  const over = text.length > MAX_CHARS;
+  const over = text.length > maxChars;
   const sealed = status === "done" && text === checkedText ? result.label : null;
 
   return (
@@ -157,7 +157,7 @@ export default function Checker({ text, setText }) {
       <div className="container">
         <div className="section-head">
           <h2 id="check-title">Check a prompt</h2>
-          <p>Paste in any message, up to {MAX_CHARS.toLocaleString()} characters, and see what the model makes of it.</p>
+          <p>Paste in any message, up to {maxChars.toLocaleString()} characters, and see what the model makes of it.</p>
           <p className={`api-status api-status--${apiStatus}`} role="status">
             <span className="api-dot" aria-hidden="true" />
             {STATUS_TEXT[apiStatus]}
@@ -194,7 +194,7 @@ export default function Checker({ text, setText }) {
             />
             <div className="check-meta">
               <p id="prompt-count" className={over ? "counter is-over" : "counter"}>
-                {text.length.toLocaleString()} / {MAX_CHARS.toLocaleString()} characters
+                {text.length.toLocaleString()} / {maxChars.toLocaleString()} characters
               </p>
               <p className="shortcut">Ctrl + Enter to check</p>
             </div>

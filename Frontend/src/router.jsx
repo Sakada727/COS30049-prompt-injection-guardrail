@@ -3,6 +3,7 @@ import Layout from "./components/Layout.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Home from "./pages/Home.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import CrashTest from "./pages/CrashTest.jsx";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
+      ...(import.meta.env.DEV ? [{ path: "/crash-test", element: <CrashTest /> }] : []),
       { path: "*", element: <NotFound /> },
     ],
   },

@@ -1,7 +1,7 @@
 const API_ROOT = `${import.meta.env.VITE_API_URL ?? ""}/api`;
 export const DOCS_URL = `${import.meta.env.VITE_API_URL ?? ""}/docs`;
 
-export const MAX_CHARS = 8000;
+export const DEFAULT_MAX_CHARS = 8000;
 
 const SESSION_KEY = "pig-session-id";
 
@@ -22,7 +22,7 @@ function readStored() {
   }
 }
 
-// Random ID per browser tab so the back end can keep each tab's history separate
+//Random ID per browser tab so the back end can keep each tab's history separate
 let sessionId = readStored() || newId();
 
 function store(id) {
@@ -52,7 +52,7 @@ function messageFrom(data, status) {
   if (typeof data?.error?.message === "string") return data.error.message;
   if (typeof data?.detail === "string") return data.detail;
   if (Array.isArray(data?.detail) && data.detail[0]?.msg) return data.detail[0].msg;
-  if (status === 413) return `That message is too large. The limit is ${MAX_CHARS.toLocaleString()} characters.`;
+  if (status === 413) return "That message is too large to send.";
   if (status >= 500) return "The guardrail hit an unexpected problem. Try again in a moment.";
   return `The request failed (status ${status}).`;
 }
@@ -88,6 +88,10 @@ export function checkPrompt(text) {
 export async function getHistory() {
   const data = await request("/history");
   return data.items;
+}
+
+export function clearHistory() {
+  return request("/history", { method: "DELETE" });
 }
 
 export function getHealth() {
