@@ -1,11 +1,4 @@
-"""
-Shared helpers for the lab scripts: paths, reading the A2 data, and the three
-"targets" an attack can be pointed at. Nothing in lab/ is imported by the app.
 
-  DirectTarget  the deployed model called in-process (same steps as the API)
-  A2Target      the Assignment 2 system as it was, for comparison
-  HttpTarget    the running API, once the back end exists
-"""
 from pathlib import Path
 import uuid
 
@@ -17,7 +10,7 @@ import scipy.sparse as sp
 from app.model.normalise import a2_normalize, prepare
 from app.security.settings import get_settings
 
-ROOT = Path(__file__).resolve().parents[1]          # backend/
+ROOT = Path(__file__).resolve().parents[1] # backend/
 MODEL_PATH = ROOT / "models" / "guardrail.joblib"
 TAB_DIR = ROOT / "reports" / "tables"
 FIG_DIR = ROOT / "reports" / "figures"
@@ -33,7 +26,7 @@ def a2_path(*parts):
 
 
 def load_a2_csv(name):
-    # Read exactly as TFIDF.ipynb did (blank or "NA" text becomes ""), so texts match training
+    #Read exactly as TFIDF.ipynb did (blank or "NA" text becomes ""), so texts match training
     df = pd.read_csv(a2_path("data", "processed", f"{name}.csv"))
     df["text"] = df["text"].fillna("").astype(str)
     return df

@@ -24,8 +24,8 @@ from lab.common import ROOT, TAB_DIR, DirectTarget, load_a2_csv
 FLOOD_SIZE, FLOOD_REPS, BODY_REPS, BODY_MB = 100, 5, 3, 100
 HEADERS = {"X-Session-ID": str(uuid.uuid4())}
 
-# The servers step 3 starts: (mode, extra settings, also run the 100 MB body test).
-# The body limit is the same middleware in both "after" servers, so it is tested once.
+#The servers step 3 starts: (mode, extra settings, also run the 100 MB body test).
+#The body limit is the same middleware in both "after" servers, so it is tested once.
 SERVERS = [
     ("before", {"PIG_DEMO_DISABLE_DOS_DEFENCE": "true", "PIG_INFERENCE_MODE": "thread"}, True),
     ("after: threads", {"PIG_INFERENCE_MODE": "thread"}, True),
@@ -91,7 +91,7 @@ async def timed_post(client, content=None, json=None):
 
 
 async def in_chunks(body, size=1_000_000):
-    # Passing a generator makes httpx send "Transfer-Encoding: chunked" and no Content-Length
+    #Passing a generator makes httpx send "Transfer-Encoding: chunked" and no Content-Length
     for i in range(0, len(body), size):
         yield body[i:i + size]
 
@@ -117,7 +117,7 @@ async def body_attack(base_url, pid, rss_at_start, chunked):
     during = [ms for phase, _, ms in probe.samples if phase == "attack"] or [0]
     return {"sent_as": "chunked, no Content-Length" if chunked else "with Content-Length",
             "status": status, "seconds": ms / 1000,
-            # Python keeps freed memory, so measure the peak against the server's size at start
+            #Python keeps freed memory, so measure the peak against the server's size at start
             "server_memory_peak_over_start_mb": (peak[0] - rss_at_start) / 1e6 if pid else None,
             "health_max_ms": max(during)}
 
@@ -165,14 +165,14 @@ def start_harness(extra_env, tmp, port=8765):
 
 
 def stop(proc):
-    # Stop the server and any worker processes it started (Windows does not stop them by itself)
+    #Stop the server and any worker processes it started (Windows does not stop them by itself)
     try:
         children = psutil.Process(proc.pid).children(recursive=True)
     except psutil.NoSuchProcess:
         children = []
     proc.terminate()
     proc.wait()
-    _, still_running = psutil.wait_procs(children, timeout=5)    # give workers a moment to exit cleanly
+    _, still_running = psutil.wait_procs(children, timeout=5) #give workers a moment to exit cleanly
     for child in still_running:
         try:
             child.terminate()
@@ -182,7 +182,7 @@ def stop(proc):
 
 
 def server_memory_mb(pid):
-    # The server plus any worker processes, so the cost of one model copy per process shows up
+    #The server plus any worker processes, so the cost of one model copy per process shows up
     if not pid:
         return None
     main = psutil.Process(pid)
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     print(f"\n3b. One {BODY_MB} MB request, with and without Content-Length\n" + body.round(2).to_string(index=False))
     print(f"\n3c. Flood of {FLOOD_SIZE} requests\n" + floods.round(1).to_string(index=False))
 
-    # The same results as lowest-to-highest ranges per server, ready for the README table
+    #The same results as lowest-to-highest ranges per server, ready for the README table
     def span(col, digits=0):
         return lambda g: f"{g[col].min():,.{digits}f} to {g[col].max():,.{digits}f}"
     summary = pd.DataFrame([{

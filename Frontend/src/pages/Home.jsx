@@ -1,35 +1,32 @@
-import { Link } from "react-router-dom";
-
-const steps = [
-  { title: "1. Send a message", text: "Type or paste any message you would give to an AI assistant." },
-  { title: "2. The model checks it", text: "A trained model looks for signs of a prompt injection attack." },
-  { title: "3. See the result", text: "You get Allowed or Blocked, with a confidence score." },
-];
+import { useState } from "react";
+import Checker from "../components/checker/Checker.jsx";
+import Defences from "../components/home/Defences.jsx";
+import Faq from "../components/home/Faq.jsx";
+import Gallery from "../components/home/Gallery.jsx";
+import Hero from "../components/home/Hero.jsx";
+import Pipeline from "../components/home/Pipeline.jsx";
+import Results from "../components/home/Results.jsx";
+import Story from "../components/home/Story.jsx";
 
 export default function Home() {
-  return (
-    <main className="page">
-      <section className="hero">
-        <h1>Stop prompt injection before it reaches your AI</h1>
-        <p>
-          Some messages try to trick an AI into ignoring its rules or leaking
-          secrets. This guardrail checks a message first and tells you whether
-          it is safe to pass on.
-        </p>
-        <Link to="/check" className="btn">Try the guardrail</Link>
-      </section>
+  const [text, setText] = useState("");
 
-      <section aria-labelledby="how">
-        <h2 id="how">How it works</h2>
-        <ul className="steps">
-          {steps.map((s) => (
-            <li key={s.title} className="step">
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
+  const tryPrompt = (example) => {
+    setText(example);
+    document.getElementById("check")?.scrollIntoView();
+    requestAnimationFrame(() => document.getElementById("prompt")?.focus({ preventScroll: true }));
+  };
+
+  return (
+    <main id="main">
+      <Hero />
+      <Story />
+      <Checker text={text} setText={setText} />
+      <Gallery onTry={tryPrompt} />
+      <Pipeline />
+      <Results />
+      <Defences />
+      <Faq />
     </main>
   );
 }

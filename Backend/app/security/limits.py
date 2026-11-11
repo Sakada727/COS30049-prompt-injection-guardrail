@@ -1,22 +1,10 @@
-"""
-Request-size limit, enforced before the body is read.
 
-Pydantic's max_length on the text field only runs after the whole body has arrived and
-been parsed, so on its own it still lets a 200 MB request be read into memory first.
-This middleware:
-  - refuses a request whose Content-Length is over the limit, without reading it
-  - stops reading a request that has no Content-Length (chunked upload) as soon as
-    it passes the limit
-Both answer 413 in the team's error format.
+#Request-size limit (enforced before the body is read).
 
-Add it in main.py:  app.add_middleware(BodySizeLimit, max_bytes=s.max_body_bytes,
-                                       enabled=not s.demo_disable_dos_defence)
-"""
 import json
 
 
 def error_body(code, message):
-    """The one JSON shape every error uses. errors.py should build its responses with this too."""
     return {"error": {"code": code, "message": message}}
 
 
@@ -54,14 +42,13 @@ class BodySizeLimit:
             if message["type"] == "http.request":
                 received += len(message.get("body", b""))
                 if received > self.max_bytes:
-                    # Answer now, then tell the app the client left so it stops reading
                     rejected = True
                     await send_error(send, 413, "payload_too_large", too_big)
                     return {"type": "http.disconnect"}
             return message
 
         async def send_unless_rejected(message):
-            if not rejected:                 # we already answered; drop the app's reply
+            if not rejected:                
                 await send(message)
 
         await self.app(scope, receive_limited, send_unless_rejected)
