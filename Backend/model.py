@@ -1,3 +1,5 @@
+import hashlib
+import io
 import logging
 from contextlib import asynccontextmanager
 
@@ -12,13 +14,19 @@ from config import MODEL_PATH, settings
 
 logger = logging.getLogger("guardrail")
 
-# Kept at module level so each worker process can import load/predict by name
+#Kept at module level so each worker process can import load/predict by name
 _bundle = None
 
 
 def load(path=MODEL_PATH):
+    #joblib files are pickles, which can run code when loaded, so only load the exact file
+    #step1_build_model.py wrote. The hash and the load use the same bytes.
     global _bundle
-    _bundle = joblib.load(path)
+    data = path.read_bytes()
+    expected = path.with_suffix(".sha256").read_text().split()[0]
+    if hashlib.sha256(data).hexdigest() != expected:
+        raise RuntimeError(f"{path.name} does not match {path.with_suffix('.sha256').name}, so it was not loaded")
+    _bundle = joblib.load(io.BytesIO(data))
 
 
 def model_loaded() -> bool:

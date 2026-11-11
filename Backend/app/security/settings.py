@@ -1,6 +1,5 @@
 """
 Every setting the back end reads, in one place (like config.py in A2).
-
 Values come from environment variables prefixed PIG_, or from backend/.env
 (git-ignored; copy .env.example). Nothing secret is written in source code.
 Each limit is justified in SECURITY.md.
@@ -20,16 +19,16 @@ class Settings(BaseSettings):
 
     max_text_chars: int = Field(8000, ge=1, le=100_000)
 
-    # History of past checks. A Postgres URL would contain a password, which is why
+    #History of past checks. A Postgres URL would contain a password, so it comes from the environment
     database_url: str = "sqlite:///./pig_history.db"
-    history_limit: int = Field(50, ge=1, le=500)       # rows returned per session
-    sql_echo: bool = False                             # print every SQL statement (for the demo)
+    history_limit: int = Field(50, ge=1, le=500) #rows returned per session
+    sql_echo: bool = False #print every SQL statement (for the demo)
 
     # Denial-of-service guard (security/inference.py)
     inference_mode: Literal["thread", "process"] = "process"
-    inference_workers: int = Field(2, ge=1, le=32)    # model calls running at once
-    inference_queue: int = Field(8, ge=0, le=1000)    # extra requests allowed to wait
-    queue_timeout_s: float = Field(2.0, gt=0, le=60)  # longest a request may wait for a slot
+    inference_workers: int = Field(2, ge=1, le=32) #model calls running at once
+    inference_queue: int = Field(8, ge=0, le=1000) #extra requests allowed to wait
+    queue_timeout_s: float = Field(2.0, gt=0, le=60) #longest a request may wait for a slot
 
     a2_dir: str = "../../COS30049_A2_Group8"
 
@@ -48,7 +47,9 @@ class Settings(BaseSettings):
 
     @property
     def max_body_bytes(self):
-        return self.max_text_chars * 4 + 1024
+        #12 bytes is the longest one character can be in JSON (an escaped emoji, "\ud83d\ude00"),
+        #plus 1 KB for the JSON around the text
+        return self.max_text_chars * 12 + 1024
 
     def demo_switches_on(self):
         return [name for name in ("demo_disable_sql_defence", "demo_disable_dos_defence",

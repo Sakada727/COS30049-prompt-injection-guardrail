@@ -31,7 +31,7 @@ const DEFENCES = [
     attack: "We sent prompts written as SQL that tried to read other people's prompts and change a blocked result to allowed.",
     defence: "Every database query passes the prompt in as a parameter, so it only ever gets stored as text.",
     measures: [
-      { what: "SQL attacks that worked", before: `${sqli.workedBefore} of ${sqli.attacks}`, after: `${sqli.workedAfter} of ${sqli.attacks}` },
+      { what: "SQL attacks that worked or crashed the query", before: `${sqli.workedBefore} of ${sqli.attacks}`, after: `${sqli.workedAfter} of ${sqli.attacks}` },
     ],
   },
 ];
