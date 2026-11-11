@@ -1,14 +1,4 @@
-"""
-STAND-IN app for attacking the security modules before the real back end exists.
 
-It wires app/db.py, app/security/* and app/model/normalise.py together exactly the way
-INTERFACE.md asks the real main.py and routes to, with the smallest possible routes.
-It is not the real app: once main.py, routes, schemas and errors.py are written, point
-the lab scripts at the real API with --target and delete this file.
-
-Run it from backend/ (settings come from PIG_ environment variables or .env):
-  python -m uvicorn --factory lab.harness_app:create_app --port 8000
-"""
 from contextlib import asynccontextmanager
 import logging
 import uuid
@@ -27,8 +17,8 @@ from app.security.settings import get_settings
 from lab.common import MODEL_PATH, vectorise
 
 
-# The model lives in a module-level variable, and load/predict are plain functions, so that
-# in "process" mode each worker process can import them by name and load its own copy.
+#The model lives in a module-level variable, and load/predict are plain functions, so that
+#in "process" mode each worker process can import them by name and load its own copy.
 _bundle = None
 
 
@@ -47,10 +37,10 @@ def predict(text):
 def build_app(settings):
     @asynccontextmanager
     async def lifespan(app):
-        for switch in settings.demo_switches_on():          # make a defence that is off impossible to miss
+        for switch in settings.demo_switches_on(): #make a defence that is off impossible to miss
             logging.getLogger("uvicorn.error").warning("DEMO SWITCH ON: %s (a defence is disabled)", switch)
         guard = InferenceGuard(predict, settings, initializer=load, initargs=(MODEL_PATH,))
-        await guard.warm_up()                               # load the model in every worker now
+        await guard.warm_up() #load the model in every worker now
         app.state.guard = guard
         app.state.history = History(settings)
         yield
@@ -65,8 +55,8 @@ def build_app(settings):
 
     @app.exception_handler(RequestValidationError)
     async def invalid(request, exc):
-        # Say which part was wrong, but never echo the input back: FastAPI's default 422
-        # would return the whole text
+        #Say which part was wrong, but never echo the input back: FastAPI's default 422
+        #would return the whole text
         if any(e["loc"][0] == "header" for e in exc.errors()):
             message = "The X-Session-ID header must be a UUID."
         else:
@@ -96,5 +86,5 @@ def build_app(settings):
 
 
 def create_app():
-    load()                                       # this process's copy (thread mode, and the demo switch)
+    load() #this process's copy (thread mode, and the demo switch)
     return build_app(get_settings())

@@ -2,28 +2,52 @@ import logging
 from contextlib import asynccontextmanager
 
 import joblib
+import scipy.sparse as sp
 from fastapi import FastAPI
 
-from config import MODEL_PATH
+from app.db import History
+from app.model.normalise import prepare
+from app.security.inference import InferenceGuard
+from config import MODEL_PATH, settings
 
 logger = logging.getLogger("guardrail")
 
-state = {}  # holds the model for the life of the server
+# Kept at module level so each worker process can import load/predict by name
+_bundle = None
+
+
+def load(path=MODEL_PATH):
+    global _bundle
+    _bundle = joblib.load(path)
+
+
+def model_loaded() -> bool:
+    return _bundle is not None
+
+
+def vectorise(word_vec, char_vec, texts):
+    return sp.hstack([word_vec.transform(texts), char_vec.transform(texts)]).tocsr()
+
+
+def predict(text: str) -> tuple[str, float]:
+    b = _bundle
+    p = b["model"].predict_proba(vectorise(b["word_vec"], b["char_vec"], [prepare(text)]))[0, 1]
+    blocked = p >= b["threshold"]
+    return ("blocked" if blocked else "allowed"), float(p if blocked else 1 - p)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Runs ONCE at startup
-    if MODEL_PATH.exists():
-        state["model"] = joblib.load(MODEL_PATH)
-        logger.info("Model loaded from %s", MODEL_PATH)
-    else:
-        state["model"] = None
-        logger.warning("No model file at %s", MODEL_PATH)
+    for switch in settings.demo_switches_on():
+        logger.warning("DEMO SWITCH ON: %s (a defence is turned off)", switch)
+    if not MODEL_PATH.exists():
+        raise RuntimeError(f"No model file at {MODEL_PATH}")
+    load()
+    logger.info("Model loaded from %s", MODEL_PATH)
+
+    guard = InferenceGuard(predict, settings, initializer=load, initargs=(MODEL_PATH,))
+    await guard.warm_up()
+    app.state.guard = guard
+    app.state.history = History(settings)
     yield
-    state.clear()
-
-
-def predict(text: str) -> tuple[str, float]:
-    # TESTING STUB: replace with the real model call later
-    return "testing", 1.0
+    guard.close()

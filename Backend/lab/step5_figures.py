@@ -32,7 +32,7 @@ def fig_evasion():
               "A3 normaliser": "A3 normaliser (after)"}
     tricks = list(dict.fromkeys(s["trick"]))
     n_a2 = int((~s.drop_duplicates("trick")["new_in_a3"]).sum())
-    rows_y = [i + 1 if i < n_a2 else i + 2 for i in range(len(tricks))]   # room for two headers
+    rows_y = [i + 1 if i < n_a2 else i + 2 for i in range(len(tricks))] #room for two headers
     fig, ax = plt.subplots(figsize=(7.5, 7.6), dpi=200)
     bar_h = 0.26
     for i, trick in enumerate(tricks):
@@ -41,7 +41,7 @@ def fig_evasion():
             y = rows_y[i] + (j - 1) * bar_h
             ax.barh(y, row["mean"] * 100, height=bar_h, color=SERIES[j], edgecolor=SURFACE, linewidth=1.5,
                     label=labels[c] if i == 0 else None)
-            if c == "A3 normaliser":                       # label only the headline series
+            if c == "A3 normaliser": #label only the headline series
                 ax.text(row["mean"] * 100 + 1.2, y, f"{row['mean']:.1%}", va="center", fontsize=7.5, color=INK2)
     names = [f"{t}  (expected failure)" if t in EXPECTED_FAILURES else t for t in tricks]
     ax.set_yticks(rows_y, names)
@@ -72,9 +72,9 @@ MODE_LABELS = {"before": "Defence off (before)", "after": "Defence on (after)",
 def fig_dos():
     samples = pd.read_csv(TAB_DIR / "dos_samples_harness.csv").query("phase == 'flood'")
     floods = pd.read_csv(TAB_DIR / "dos_flood_harness.csv")
-    modes = list(dict.fromkeys(floods["mode"]))                 # in the order step 3 ran them
+    modes = list(dict.fromkeys(floods["mode"])) #in the order step 3 ran them
     n = len(modes)
-    width = 0.78 / n                                             # space for each mode inside a group
+    width = 0.78 / n #space for each mode inside a group
     fig, (left, right) = plt.subplots(1, 2, figsize=(8.8, 4.4), dpi=200, gridspec_kw={"width_ratios": [1.6, 1]})
     rng = np.random.default_rng(0)
     hollow_shown = False

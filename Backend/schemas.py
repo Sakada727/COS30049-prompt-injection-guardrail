@@ -1,6 +1,10 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 from config import MAX_TEXT_LENGTH
+
+Label = Literal["blocked", "allowed"]
 
 
 class CheckRequest(BaseModel):
@@ -8,8 +12,21 @@ class CheckRequest(BaseModel):
 
 
 class CheckResult(BaseModel):
-    label: str
+    id: int
+    label: Label
     confidence: float
+
+
+class HistoryItem(BaseModel):
+    id: int
+    text: str
+    label: Label
+    confidence: float
+    created_at: str
+
+
+class HistoryResult(BaseModel):
+    items: list[HistoryItem]
 
 
 class HealthResult(BaseModel):

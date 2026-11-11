@@ -81,7 +81,7 @@ if __name__ == "__main__":
     wide = summary.pivot_table(index=["trick", "new_in_a3"], columns="condition", values="mean", sort=False)
     print("\nMean evasion rate over 5 seeds\n" + (wide * 100).round(1).to_string())
 
-    # The three rows of the README table: A2 tricks, new tricks, and the expected failure
+    #The three rows of the README table: A2 tricks, new tricks, and the expected failure
     group = summary["trick"].map(lambda t: "expected failure (chunked)" if t in EXPECTED_FAILURES
                                  else "new in A3 (mean)" if t in NEW_TRICKS else "from A2 (mean)")
     groups = (summary.assign(group=group).groupby(["group", "condition"], sort=False)["mean"].mean()
